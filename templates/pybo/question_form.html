@@ -4,12 +4,7 @@
     <h5 class="my-3 border-bottom pb-2">질문등록</h5>
     <form method="post" class="post-form my-3">
         {% csrf_token %}
-
-        <!-- 자동 form 생성 : 디자인 적용 어렵다는 단점 있음
-        {{ form.as_p }}
-        -->
-
-         <!-- 오류표시 Start -->
+        <!-- 오류표시 Start -->
         {% if form.errors %}
             <div class="alert alert-danger" role="alert">
             {% for field in form %}
@@ -31,7 +26,6 @@
             <textarea class="form-control" name="content"
                       id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
-
         <button type="submit" class="btn btn-primary">저장하기</button>
     </form>
 </div>
