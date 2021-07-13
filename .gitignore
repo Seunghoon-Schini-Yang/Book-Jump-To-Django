@@ -1,3 +1,5 @@
 venv
 .idea
-config/settings.py
+db.sqlite3
+*.pyc
+__pycache__
