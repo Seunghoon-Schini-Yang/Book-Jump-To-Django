@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from ..models import Question
 from django.core.paginator import Paginator
 from django.db.models import Q, Count
-
+import time
 
 def index(request):
     """
@@ -35,6 +35,9 @@ def index(request):
     page_obj = paginator.get_page(page)
 
     context = {'question_list': page_obj, 'page': page, 'kw': kw}
+
+    time.sleep(10)
+    print('sleep.....')
 
     return render(request, 'pybo/question_list.html', context)
 
