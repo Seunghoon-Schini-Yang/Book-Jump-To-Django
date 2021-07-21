@@ -2,14 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from ..models import Question
 from django.core.paginator import Paginator
 from django.db.models import Q, Count
-<<<<<<< HEAD
 import time
-=======
 import logging
 
 logger = logging.getLogger('pybo')
 
->>>>>>> 70bf85a740e8021d315d2b24a6c7a194f7008613
 
 def index(request):
     logger.info("INFO 레벨로 출력")
